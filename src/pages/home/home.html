@@ -18,119 +18,24 @@
       <ion-label stacked>Password</ion-label>
       <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
+  <ion-list radio-group [(ngModel)]="who">
+    <ion-item>
+      <ion-label>Teacher</ion-label>
+      <ion-radio value="Teacher" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Student</ion-label>
+      <ion-radio value="Student"></ion-radio>
+    </ion-item>
+    
+  </ion-list>
   
-  
-  <button ion-button color="secondary" (click)="login()">Secondary</button>
+  <button ion-button color="secondary" (click)="login()" >Loginteacher</button>
+  <button ion-button color="secondary" (click)="loginstudent()">Loginstudent</button>
+  <button ion-button color="secondary" (click)="register()">Register</button>
 </ion-list>
 <p>{{name}}</p>
 <p>{{password}}</p>
-
-<!-- Real floating action button, fixed. It will not scroll with the content -->
-<ion-fab top right edge>
-  <button ion-fab mini>
-    <ion-icon name="add"></ion-icon>
-  </button>
-  <ion-fab-list>
-    <button ion-fab>
-      <ion-icon name="logo-facebook"></ion-icon>
-    </button>
-    <button ion-fab>
-      <ion-icon name="logo-twitter"></ion-icon>
-    </button>
-    <button ion-fab>
-      <ion-icon name="logo-vimeo"></ion-icon>
-    </button>
-    <button ion-fab>
-      <ion-icon name="logo-googleplus"></ion-icon>
-    </button>
-  </ion-fab-list>
-</ion-fab>
-
-<ion-fab right bottom>
-  <button ion-fab color="light">
-    <ion-icon name="arrow-dropleft"></ion-icon>
-  </button>
-  <ion-fab-list side="left">
-    <button ion-fab>
-      <ion-icon name="logo-facebook"></ion-icon>
-    </button>
-    <button ion-fab>
-      <ion-icon name="logo-twitter"></ion-icon>
-    </button>
-    <button ion-fab>
-      <ion-icon name="logo-vimeo"></ion-icon>
-    </button>
-    <button ion-fab>
-      <ion-icon name="logo-googleplus"></ion-icon>
-    </button>
-  </ion-fab-list>
-</ion-fab>
-
-
-
-
-<!-- <ion-list>
-  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-    {{ item }}
-  </button>
-</ion-list> -->
-             <!-- radio button -->
-<ion-list radio-group [(ngModel)]="relationship">
-  <ion-item>
-    <ion-label>Friends</ion-label>
-    <ion-radio value="friends" checked></ion-radio>
-  </ion-item>
-  <ion-item>
-    <ion-label>Family</ion-label>
-    <ion-radio value="family"></ion-radio>
-  </ion-item>
-  <ion-item>
-    <ion-label>Enemies</ion-label>
-    <ion-radio value="enemies" [disabled]="isDisabled"></ion-radio>
-  </ion-item>
-</ion-list>
-
-
-                                  <!-- Checkbox -->
-<ion-list>
-
-  <ion-item>
-    <ion-label>Pepperoni</ion-label>
-    <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Sausage</ion-label>
-    <ion-checkbox [(ngModel)]="sausage" disabled="true"></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Mushrooms</ion-label>
-    <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
-  </ion-item>
-
-</ion-list>
-
-
-
-<ion-list>
-  <ion-item>
-    <ion-avatar item-start>
-      <img src="viki.png">
-    </ion-avatar>
-    <h2>Finn</h2>
-    <h3>Don't Know What To Do!</h3>
-    <p>I've had a pretty messed up day. If we just...</p>
-  </ion-item>
-<ion-item>
-  <ion-avatar item-start>
-    <img src="viki.png">
-  </ion-avatar>
-  <h2>Finn</h2>
-  <h3>Don't Know What To Do!</h3>
-  <p>I've had a pretty messed up day. If we just...</p>
-</ion-item>
-</ion-list>
 
 </ion-content>
 
